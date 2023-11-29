@@ -67,14 +67,14 @@ class ProductManager {
 
 const test = async () => {
     const productManager = new ProductManager('./products.json');
-    await productManager.addProduct({
-        title: 'Teclado trust gtx',
-        description: 'Teclado semimecanico',
-        price: 25000,
-        thumbnail: './Trust.jpg',
-        code: 1111,
-        stock: 5,
-    })
+    // await productManager.addProduct({
+    //     title: 'Teclado trust gtx',
+    //     description: 'Teclado semimecanico',
+    //     price: 25000,
+    //     thumbnail: './Trust.jpg',
+    //     code: 1111,
+    //     stock: 5,
+    // })
         // await productManager.addProduct({
         //     title: 'Teclado VSG 2.0',
         //     description: 'Teclado semimecanico',
@@ -105,6 +105,6 @@ const test = async () => {
         await productManager.updateProduct(3, {
             price: 34000
         })
-        // await productManager.deleteProduct(1);
+    await productManager.deleteProduct(1);
     }
 test();
