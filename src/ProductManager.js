@@ -1,4 +1,3 @@
-const fs = require('fs');
 class ProductManager {
     constructor(path) {
         this.path = path;
@@ -64,6 +63,8 @@ class ProductManager {
         await fs.promises.writeFile(this.path, JSON.stringify(productsDeleted), 'utf-8')
     }
 }
+
+export default ProductManager;
 
 const test = async () => {
     const productManager = new ProductManager('./products.json');
